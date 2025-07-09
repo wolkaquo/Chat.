@@ -26,9 +26,7 @@ const server = http.createServer(app) /*<= Crea el servidor HTTP con Express*/
 const io = socketIo(server)/*<= Inicializa Socket.IO sobre ese servidor*/
 
 /*Conexión a la base de datos MongoDB*/
-mongoose.connect('process.env.MONGO_URI', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => console.log('MongoDB connected'))/*<= Confirmación exitosa*/
 .catch(err => console.error(err))/*<= Muestra errores de conexión*/ 
