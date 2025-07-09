@@ -26,7 +26,7 @@ const server = http.createServer(app) /*<= Crea el servidor HTTP con Express*/
 const io = socketIo(server)/*<= Inicializa Socket.IO sobre ese servidor*/
 
 /*Conexión a la base de datos MongoDB*/
-mongoose.connect('mongodb://localhost/chat-app', {
+mongoose.connect('process.env.MONGO_URI', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
