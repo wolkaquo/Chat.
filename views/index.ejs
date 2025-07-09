@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="chat-container">
+
+    <!-- Nombre del usuario -->
+    <div id="chat-header">
+      <input id="username" placeholder="Tu nombre" />
+    </div>
+
+    <!-- Lista de mensajes -->
+    <ul id="messages"></ul>
+
+    <!-- Indicador de escritura (justo arriba del input) -->
+    <div id="typing"></div>
+
+    <!-- Entrada de mensaje -->
+    <div id="message-dow">
+      <input id="m" autocomplete="off" placeholder="Escribe un mensaje..." />
+      <button id="send">ENVIAR</button>
+    </div>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
