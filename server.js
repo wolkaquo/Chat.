@@ -26,6 +26,8 @@ const server = http.createServer(app) /*<= Crea el servidor HTTP con Express*/
 const io = socketIo(server)/*<= Inicializa Socket.IO sobre ese servidor*/
 
 /*Conexión a la base de datos MongoDB*/
+require('dotenv').config();/*<= Conecta las variables del archivo .env*/
+
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -92,4 +94,5 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 })
+
 
