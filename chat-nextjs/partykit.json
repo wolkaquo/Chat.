@@ -1,0 +1,10 @@
+{
+  "name": "chat-nextjs",
+  "main": "party/chatServer.ts",
+  "parties": {
+    "chatroom": "party/chatServer.ts"
+  },
+  "serve": {
+    "path": ".next/standalone"
+  }
+}
